@@ -14,5 +14,3 @@ after_success:
   #- test "$TRAVIS_BRANCH" = "master" && sh .travis/deploy_heroku.sh
   - sh .travis/deploy_heroku.sh
 
-notifications:
-    slack: saptadip-sarkar:uVBlKJDOikQcHZH7xa8Ejfoh
