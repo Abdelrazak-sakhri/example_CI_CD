@@ -1,0 +1,40 @@
+{% extends "header.html" %}
+
+{% block body %}
+
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#summary" aria-controls="summary" role="tab" data-toggle="tab">Summary</a></li>
+    <li role="presentation"><a href="#demand" aria-controls="demand" role="tab" data-toggle="tab">Demand</a></li>
+    <li role="presentation"><a href="#supplier" aria-controls="supplier" role="tab" data-toggle="tab">Supplier</a></li>
+    <li role="presentation"><a href="#lnews" aria-controls="lnews" role="tab" data-toggle="tab">Latest News</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade" id="demand">Demand details
+
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="supplier">Supplier details
+
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade in active" id="summary">
+          <li> Cancelled Order: {{ summary['cancelled_order'] }} </li>
+          <li> Pending Order: {{ summary['pending_order'] }} </li>
+          <li> Complete Order: {{ summary['complete_order'] }} </li>
+      </div>
+
+      <div role="tabpanel" class="tab-pane fade" id="lnews">Latest news
+
+      </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
